@@ -5,6 +5,17 @@ gem 'rails', '4.1.1'
 gem 'sqlite3'
 gem 'devise'
 
+
+
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
+
+# Use mysql as the database for Active Record
+gem 'mysql2'
+
+gem 'tzinfo'
+
+gem 'bcrypt-ruby', '3.1.1.rc1', :require => 'bcrypt'
+
 # frontend
 gem 'slim-rails'
 gem 'sass-rails', '~> 4.0.3'
