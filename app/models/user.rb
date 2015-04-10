@@ -8,6 +8,10 @@ class User < ActiveRecord::Base
   has_many :answers
 
   def to_s
-    email
+  if(name.empty?)
+	email
+	else
+	name
+	end
   end
 end

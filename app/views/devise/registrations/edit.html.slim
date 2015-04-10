@@ -6,6 +6,10 @@ h2 Edit Profile
   .field
     = f.label :email
     = f.email_field :email, autofocus: true
+	
+  .field
+    = f.label :name
+    = f.text_field :name
 
   .field
     = f.label :password
@@ -22,7 +26,7 @@ h2 Edit Profile
     .hint
       ' (we need your current password to confirm your changes)
     = f.password_field :current_password, autocomplete: "off"
-
+	
   div
     = f.submit "Update"
 
