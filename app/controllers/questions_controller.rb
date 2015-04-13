@@ -12,6 +12,7 @@ class QuestionsController < ApplicationController
 
   def new
     @question = Question.new
+
   end
 
   def edit
@@ -26,11 +27,14 @@ class QuestionsController < ApplicationController
   def create
     @question = Question.new(question_params)
     @question.user = current_user
+	@question.user.points -= 10
 	if @question.save
+	@question.user.save
       redirect_to @question, notice: 'Question was successfully created.'
     else
       render :new
     end
+
   end
 
  def update
