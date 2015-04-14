@@ -22,5 +22,9 @@
 	.points
 	h3 Points:
 	= @user.points
+	
+	- if @user.points >= 1000
+	 = image_tag("star.jpg")
 
+	
 	
