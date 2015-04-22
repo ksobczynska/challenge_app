@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'leaderboard/index'
+
   devise_for :users
 
   root to: 'questions#index'

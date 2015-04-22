@@ -8,6 +8,7 @@ class QuestionsController < ApplicationController
 
   def show
     @answer = Answer.new
+
   end
 
   def new
@@ -20,6 +21,7 @@ class QuestionsController < ApplicationController
 		render :edit
 	else
 		redirect_to @question, alert: "You can only edit your own questions."
+
 	end
   end
 

@@ -8,12 +8,15 @@ class AnswersController < ApplicationController
     @answer.question = @question
 
     if @answer.save
+	 UserMailer.answer_notification(@question.user).deliver
       redirect_to question_path(@question), notice: "Answer was successfully created."
     else
       redirect_to question_path(@question), alert: "There was an error when adding answer."
     end
-  end
 
+
+  end
+  
   private
 
     def set_question
